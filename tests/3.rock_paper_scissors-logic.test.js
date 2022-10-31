@@ -35,13 +35,13 @@ describe(`RockPaperScissors class`, function () {
     it(`Math.Random = 0.5 -> Paper`, function() {
       mathRandomSpy.mockImplementation(() => 0.5);
       const game = new RockPaperScissors();
-      expect(game.generateCPUResponse()).toBe(`Paper`);
+      expect(game.generateCPUResponse()).toBe(`paper`);
     });
 
-    it(`Math.Random = 0.9 -> Paper`, function() { //Shouldn't this be scissors??
+    it(`Math.Random = 0.9 -> Scissors`, function() { //changed to scissors
       mathRandomSpy.mockImplementation(() => 0.9);
       const game = new RockPaperScissors();
-      expect(game.generateCPUResponse()).toBe(`Paper`);
+      expect(game.generateCPUResponse()).toBe(`scissors`);
     });
 
   });
