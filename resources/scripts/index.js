@@ -1,3 +1,4 @@
+import { RockPaperScissors } from './rock_paper_scissors.js';
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById(`game-screen`);
@@ -46,7 +47,7 @@ startGameButton.addEventListener(`click`, function (e) {
 goButton.addEventListener(`click`, function (e) {
   e.preventDefault(); 
   const selectedOption = userSelection.options[userSelection.selectedIndex].value;
-  game.play(userSelection.value); 
+  game.play(selectedOption);  //userSelection.value
   updateScoreTallyUI(); 
   updateGameHistoryUI();
   
